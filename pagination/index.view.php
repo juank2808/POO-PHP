@@ -1,3 +1,6 @@
+<?php
+require('connection.php');
+ ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -12,20 +15,32 @@
       <h1>Articles</h1>
       <section class="articles">
         <ul>
-          <li>1. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-          <li>2. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-          <li>3. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
-          <li>4. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+          <?php foreach ($sql as $article): ?>
+            <li><?php echo $article['id'] .' - '. $article['a_title'];?></li>
+          <?php endforeach; ?>
         </ul>
       </section>
       <section class="pagination">
         <ul>
-          <li class="disabled"><a href="#">&laquo;</a></li>
-          <li class="active"><a href="#">1</a></li>
-          <li><a href="#">2</a></li>
-          <li><a href="#">3</a></li>
-          <li><a href="#">4</a></li>
-          <li> <a href="#">&raquo;</a></li>
+          <?php if ($page == 1): ?>
+            <li class="disabled"><a href="#">&laquo;</a></li>
+          <?php else: ?>
+            <li><a href="?page=<?php echo $page -1 ?>">&laquo;</a>
+          <?php endif; ?>
+          <?php
+            for ($i=1; $i <= $n_Page; $i++) {
+              if ($page == $i) {
+                echo "  <li class='active'><a href='?page=$i'>$i</a></li>";
+              }else{
+                echo "<li><a href='?page=$i'>$i</a></li>";
+              }
+            }
+           ?>
+           <?php if ($page == $n_Page): ?>
+             <li class="disabled"><a href="#">&raquo;</a></li>
+           <?php else: ?>
+             <li><a href="?page=<?php echo $page +1 ?>">&raquo;</a>
+           <?php endif; ?>
         </ul>
       </section>
     </div>
