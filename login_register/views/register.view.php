@@ -24,6 +24,10 @@
           <i class="send-btn fa fa-arrow-right" onclick="login.submit();"></i>
         </div>
       </form>
+      <p class="text-register">
+        Have you a account?
+        <a href="login.php">Sign in</a>
+      </p>
     </div>
   </body>
 </html>
