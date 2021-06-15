@@ -23,6 +23,13 @@
           <i class="icon left fa fa-lock"></i><input type="password" name="password2" value="" class="pass_btn" placeholder="Sec password">
           <i class="send-btn fa fa-arrow-right" onclick="login.submit();"></i>
         </div>
+        <?php if(!empty($error)): ?>
+        <div class="error">
+          <ul>
+            <?php echo $error; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
       </form>
       <p class="text-register">
         Have you a account?
