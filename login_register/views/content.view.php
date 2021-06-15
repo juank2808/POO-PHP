@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, user-scalable=nom initial-scale=1.0; minumum-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-<<<<<<< HEAD
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
-=======
-<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
->>>>>>> ac43b8d20fd6528e36699666fba0a5334cee26bc
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title></title>
   </head>
@@ -17,10 +14,9 @@
     <div class="container">
       <h1 class="title">My content</h1>
       <a href="logout.php">Log Out</a>
-<<<<<<< HEAD
+
       <hr class="border"/>
-=======
->>>>>>> ac43b8d20fd6528e36699666fba0a5334cee26bc
+
       <div class="content">
         <article>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
