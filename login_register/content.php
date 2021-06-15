@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php session_start();
 
 if (isset($_SESSION['user'])) {
@@ -8,4 +9,8 @@ if (isset($_SESSION['user'])) {
 
 
 
+=======
+<?php
+require('views/content.view.php');
+>>>>>>> ac43b8d20fd6528e36699666fba0a5334cee26bc
  ?>
