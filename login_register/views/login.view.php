@@ -14,12 +14,19 @@
       <hr class="border"/>
       <form class="form" name="login" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
         <div class="form-group">
-          <i class="icon left fa fa-user"></i><input type="text" name="user" value="" class="user" placeholder="New user">
+          <i class="icon left fa fa-user"></i><input type="text" name="user" value="" class="user" placeholder="Your user">
         </div>
         <div class="form-group">
           <i class="icon left fa fa-lock"></i><input type="password" name="password" value="" class="pass_btn" placeholder="Password">
           <i class="send-btn fa fa-arrow-right" onclick="login.submit();"></i>
         </div>
+        <?php if(!empty($error)): ?>
+        <div class="error">
+          <ul>
+            <?php echo $error; ?>
+          </ul>
+        </div>
+        <?php endif; ?>
       </form>
       <p class="text-register">
         Don't have an account?
