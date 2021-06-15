@@ -19,7 +19,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $statement->execute(array(':user'=>$user));
 
     $result = $statement->fetch();
-    print_r($result);
+    // print_r($result);
+    if ($result !=false) {
+      $error.='The user '.$user.' already exists !';
+    }
   }
 }
 require('views/register.view.php');
