@@ -21,7 +21,7 @@
         </div>
         <div class="form-group">
           <i class="icon left fa fa-lock"></i><input type="password" name="password2" value="" class="pass_btn" placeholder="Sec password">
-          <i class="send-btn fa fa-arrow-right"></i>
+          <i class="send-btn fa fa-arrow-right" onclick="login.submit();"></i>
         </div>
       </form>
     </div>
