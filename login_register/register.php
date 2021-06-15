@@ -14,7 +14,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   if (empty($user) or empty($pass) or empty($pass2)) {
     $error.= '<li>Please, write the data correctly!</li>';
   }else {
-    
+    $conn = new Connection();
+    $conn = $conn->connect();
   }
 }
 require('views/register.view.php');
