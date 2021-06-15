@@ -45,14 +45,14 @@ a:hover{
   width: 100%;
   margin-bottom: 10px;
 }
-.form input[type"text"]
-.form input[type"password"]{
-  padding: 15px;
+.form .user, .form .password{
+  padding: 13.5px;
   font-family: 'Raleway', sans-serif;
   font-size: 18px;
   line-height: 18px;
   border: none;
   vertical-align: top;
+  margin-bottom: 10px;
 }
 .form .icon{
   padding: 15px;
@@ -84,6 +84,12 @@ a:hover{
 }
 .form .pass_btn{
     width: calc(100% - 105px);
+    padding: 13.5px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 18px;
+    border: none;
+    vertical-align: top;
 }
 .form .error ul{
   padding: 0 15px;
